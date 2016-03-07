@@ -1,14 +1,22 @@
+package Common;
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.InetAddress;
 import java.net.Socket;
+import java.sql.Date;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
+import java.util.TimeZone;
 
 public class SHTTPTestClient {
 	// test client property 
@@ -26,6 +34,7 @@ public class SHTTPTestClient {
 	
 	// Debug or not
 	private static boolean DEBUG = false;
+	
 	class RequestThread extends Thread {
 		@Override
 		public void run() {
@@ -48,33 +57,47 @@ public class SHTTPTestClient {
 						/*
 						 * GET <URL> HTTP/1.0
 						 * Host: <ServerName>
+						 * User-Agent: 
+						 * If-Modified-Since: Sat, 29 Oct 1994 19:43:31 GMT	
 						 * CRLF
 						 */
-						String httpString = "GET " + filename + " HTTP/1.0\r\n" + "Host: " + servname + "\r\n" + "\r\n";
+						Calendar calendar = Calendar.getInstance();
+						SimpleDateFormat rfc1123format = new SimpleDateFormat("EEE, d MMM yyyy HH:mm:ss 'GMT'", Locale.US);
+						rfc1123format.setTimeZone(TimeZone.getTimeZone("GMT"));
+//						String httpString =
+//				                "GET " + filename + " HTTP/1.0\r\n" + "Host: " + servname + "\r\n"
+//				                    + "If-Modified-Since: " + rfc1123format.format(calendar.getTime()) + "\r\n"
+//				                    + "User-Agent: SHTTPTestClient" + "\r\n\r\n";	
+						// iphone
+						String httpString =
+				                "GET " + filename + " HTTP/1.0\r\n" + "Host: " + servname + "\r\n"
+				                    + "If-Modified-Since: " + rfc1123format.format(calendar.getTime()) + "\r\n"
+				                    + "User-Agent: iPhone" + "\r\n\r\n";	
 						// Is this the right place to count the start time?
 						long timeIssued = System.currentTimeMillis();
 						outToServer.writeBytes(httpString);
 						
-						// create read stream and receive from server
-						BufferedReader inFromServer = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-						
 						// block until getting first data 
+						InputStream is = socket.getInputStream();
+
+			            // block until getting first data (collect waste time)
 						StringBuffer sb = new StringBuffer();
-						sb.append((char) inFromServer.read());
-						// time to get first data
-						timeIssued = System.currentTimeMillis() - timeIssued;
-						// read the following data
-						char[] buf = new char[1024];
-						while(inFromServer.read(buf) != -1) {
-							sb.append(buf);
-						}
+			            sb.append((char) is.read());
+			            timeIssued = System.currentTimeMillis() - timeIssued;
+
+			            byte[] buf = new byte[4096];
+			            int total = 0, cnt;
+			            while ((cnt = is.read(buf)) > 0) {
+			              total += cnt;
+			            }
+						
 						socket.close();
 						
-						// update count variable
+//						 update count variable
 						synchronized(SHTTPTestClient.this) {
 							wasteTime += timeIssued;
 							fileCnt++;
-							byteCnt += sb.length();
+							byteCnt += total;
 						}
 					} catch (IOException e) {
 						// TODO Auto-generated catch block
