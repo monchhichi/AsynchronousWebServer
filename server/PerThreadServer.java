@@ -12,7 +12,7 @@ public class PerThreadServer extends Server {
 		try {
 			while (true) {
 				// take a ready connection from the accepted queue
-				Socket connectionSocket;
+				final Socket connectionSocket;
 				connectionSocket = listenSocket.accept(); // accept is a block function
 				new Thread(new Runnable() {
 					
