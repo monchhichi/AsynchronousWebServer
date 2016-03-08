@@ -79,7 +79,7 @@ public class SHTTPTestClient {
 				                "GET " + filename + " HTTP/1.0\r\n" + "Host: " + servname + "\r\n"
 				                    + "If-Modified-Since: " + rfc1123format.format(calendar.getTime()) + "\r\n"
 				                    + "User-Agent: iPhone" + "\r\n\r\n";	
-//						System.out.println(httpString);
+						System.out.println(httpString);
 						
 						// Is this the right place to count the start time?
 						long timeIssued = System.currentTimeMillis();
