@@ -71,7 +71,7 @@ public class SHTTPTestClient {
 //				                    + "User-Agent: SHTTPTestClient" + "\r\n\r\n";	
 						// iphone
 //						System.out.println(servname);
-						filename = "/classes/cs433/web/www-root/html-small/" + filename;
+						filename = "/classes/cs433/web/www-root/html-big/" + filename;
 						
 //						System.out.println(filename);
 
