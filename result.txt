@@ -1,0 +1,1 @@
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 1 -files filelist.txt -T 60 >> result.txt
