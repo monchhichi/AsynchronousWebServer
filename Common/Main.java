@@ -8,6 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import async.AsyncServer;
 import server.*;
 
 public class Main {
@@ -123,6 +124,7 @@ public class Main {
 			case "welcome"			: server = new WelcomeServer();		break;
 			case "busywait"			: server = new BusyWaitServer();	break;
 			case "suspension"		: server = new SuspensionServer();	break;
+			case "async"			: server = new AsyncServer();		break;
 			default: System.err.println("Unknown approach!"); return;
 		}
 		server.setCache(Integer.parseInt(config.get("CacheSize")));

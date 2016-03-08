@@ -12,9 +12,9 @@ import java.nio.channels.SelectionKey;
 import java.nio.channels.SocketChannel;
 import java.util.Map;
 
-import Common.HTTPRequest;
 import load.DumbBalancer;
-import load.LoadBalancer;
+
+import Common.HTTPRequest;
 
 public class RequestHandler implements IReadWriteHandler {
 
@@ -142,8 +142,7 @@ public class RequestHandler implements IReadWriteHandler {
 			Debug.DEBUG("handleRead: readBytes == -1");
 		} else {
 			inBuffer.flip(); // read input
-			// outBuffer = ByteBuffer.allocate( inBuffer.remaining() );
-			while (!requestComplete && inBuffer.hasRemaining() && request.length() < request.capacity()) {
+			while (inBuffer.hasRemaining() && request.length() < request.capacity()) {
 				char ch = (char) inBuffer.get();
 				request.append(ch);
 			} // end of while
@@ -151,9 +150,8 @@ public class RequestHandler implements IReadWriteHandler {
 		System.out.println(request.toString());
 		inBuffer.clear(); // we do not keep things in the inBuffer
 
-		if (requestComplete) {
-			generateResponse();
-		}
+		requestComplete = true;
+		generateResponse();
 	} // end of process input
 
 	private void generateResponse() {

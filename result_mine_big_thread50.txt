@@ -1,0 +1,91 @@
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 1 -files filelist.txt -T 60 >> result.txt
+112537 files downloaded
+1875.6166666666666 files per second
+2588351 bytes received
+43139.183333333334 bytes per second
+43194 miliseconds wasted
+719.9 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 2 -files filelist.txt -T 60 >> result.txt
+191815 files downloaded
+3196.9166666666665 files per second
+4411745 bytes received
+73529.08333333333 bytes per second
+91116 miliseconds wasted
+1518.6 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 3 -files filelist.txt -T 60 >> result.txt
+230765 files downloaded
+3846.0833333333335 files per second
+5307595 bytes received
+88459.91666666667 bytes per second
+142998 miliseconds wasted
+2383.3 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 4 -files filelist.txt -T 60 >> result.txt
+267641 files downloaded
+4460.683333333333 files per second
+6155743 bytes received
+102595.71666666666 bytes per second
+196583 miliseconds wasted
+3276.383333333333 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 5 -files filelist.txt -T 60 >> result.txt
+295468 files downloaded
+4924.466666666666 files per second
+6795764 bytes received
+113262.73333333334 bytes per second
+250156 miliseconds wasted
+4169.266666666666 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 10 -files filelist.txt -T 60 >> result.txt
+433578 files downloaded
+7226.3 files per second
+9972294 bytes received
+166204.9 bytes per second
+514560 miliseconds wasted
+8576.0 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 15 -files filelist.txt -T 60 >> result.txt
+579366 files downloaded
+9656.1 files per second
+13325418 bytes received
+222090.3 bytes per second
+761370 miliseconds wasted
+12689.5 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 20 -files filelist.txt -T 60 >> result.txt
+713469 files downloaded
+11891.15 files per second
+16409787 bytes received
+273496.45 bytes per second
+1006234 miliseconds wasted
+16770.566666666666 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 30 -files filelist.txt -T 60 >> result.txt
+891012 files downloaded
+14850.2 files per second
+20493276 bytes received
+341554.6 bytes per second
+1485786 miliseconds wasted
+24763.1 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 40 -files filelist.txt -T 60 >> result.txt
+1015006 files downloaded
+16916.766666666666 files per second
+23345138 bytes received
+389085.63333333336 bytes per second
+1970307 miliseconds wasted
+32838.45 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 50 -files filelist.txt -T 60 >> result.txt
+1088022 files downloaded
+18133.7 files per second
+25024506 bytes received
+417075.1 bytes per second
+2496550 miliseconds wasted
+41609.166666666664 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 60 -files filelist.txt -T 60 >> result.txt
+1103416 files downloaded
+18390.266666666666 files per second
+25378568 bytes received
+422976.13333333336 bytes per second
+2737841 miliseconds wasted
+45630.683333333334 miliseconds wasted per second
+java Common.SHTTPTestClient -server frog.cs.yale.edu -servname frog.cs.yale.edu -port 8000 -parallel 70 -files filelist.txt -T 60 >> result.txt
+1087565 files downloaded
+18126.083333333332 files per second
+25013995 bytes received
+416899.9166666667 bytes per second
+2882447 miliseconds wasted
+48040.78333333333 miliseconds wasted per second

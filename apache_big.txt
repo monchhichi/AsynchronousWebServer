@@ -1,0 +1,91 @@
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 1 -files filelist.txt -T 30 >> result.txt
+6020 files downloaded
+200.66666666666666 files per second
+927080 bytes received
+30902.666666666668 bytes per second
+18280 miliseconds wasted
+609.3333333333334 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 2 -files filelist.txt -T 30 >> result.txt
+7832 files downloaded
+261.06666666666666 files per second
+1206128 bytes received
+40204.26666666667 bytes per second
+41765 miliseconds wasted
+1392.1666666666667 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 3 -files filelist.txt -T 30 >> result.txt
+9268 files downloaded
+308.93333333333334 files per second
+1427272 bytes received
+47575.73333333333 bytes per second
+59883 miliseconds wasted
+1996.1 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 4 -files filelist.txt -T 30 >> result.txt
+20995 files downloaded
+699.8333333333334 files per second
+3233230 bytes received
+107774.33333333333 bytes per second
+77410 miliseconds wasted
+2580.3333333333335 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 5 -files filelist.txt -T 30 >> result.txt
+21829 files downloaded
+727.6333333333333 files per second
+3361666 bytes received
+112055.53333333334 bytes per second
+89350 miliseconds wasted
+2978.3333333333335 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 10 -files filelist.txt -T 30 >> result.txt
+26938 files downloaded
+897.9333333333333 files per second
+4148452 bytes received
+138281.73333333334 bytes per second
+163950 miliseconds wasted
+5465.0 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 15 -files filelist.txt -T 30 >> result.txt
+56215 files downloaded
+1873.8333333333333 files per second
+8657110 bytes received
+288570.3333333333 bytes per second
+273938 miliseconds wasted
+9131.266666666666 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 20 -files filelist.txt -T 30 >> result.txt
+65614 files downloaded
+2187.133333333333 files per second
+10104556 bytes received
+336818.5333333333 bytes per second
+457527 miliseconds wasted
+15250.9 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 30 -files filelist.txt -T 30 >> result.txt
+94149 files downloaded
+3138.3 files per second
+14498946 bytes received
+483298.2 bytes per second
+723531 miliseconds wasted
+24117.7 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 40 -files filelist.txt -T 30 >> result.txt
+101676 files downloaded
+3389.2 files per second
+15658104 bytes received
+521936.8 bytes per second
+986469 miliseconds wasted
+32882.3 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 50 -files filelist.txt -T 30 >> result.txt
+100419 files downloaded
+3347.3 files per second
+15464526 bytes received
+515484.2 bytes per second
+1327181 miliseconds wasted
+44239.36666666667 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 60 -files filelist.txt -T 30 >> result.txt
+94906 files downloaded
+3163.5333333333333 files per second
+14615524 bytes received
+487184.13333333336 bytes per second
+1692785 miliseconds wasted
+56426.166666666664 miliseconds wasted per second
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 70 -files filelist.txt -T 30 >> result.txt
+91532 files downloaded
+3051.0666666666666 files per second
+14095928 bytes received
+469864.26666666666 bytes per second
+1948137 miliseconds wasted
+64937.9 miliseconds wasted per second
