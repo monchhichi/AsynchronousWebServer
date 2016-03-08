@@ -39,16 +39,19 @@ public class SHTTPTestClient {
 			long startTime = System.currentTimeMillis();
 			while(true) {
 				// The client stops after <time of test in seconds>.
-				if(System.currentTimeMillis() - startTime >= testTime * 1000) {
-					break;
-				}
 				/*
 				 * The client should print out the total transaction throughput (# files finished downloading by all threads, averaged over per second), 
 				 * data rate throughput (number bytes received, averaged over per second), 
 				 * and the average of wait time (i.e., time from issuing request to getting first data).
 				 */
+				if(System.currentTimeMillis() - startTime >= testTime * 1000) {
+					break;
+				}
 				for(String filename: filesList) {
 					try {
+						if(System.currentTimeMillis() - startTime >= testTime * 1000) {
+							break;
+						}
 						// send request
 						Socket socket = new Socket(InetAddress.getByName(server), port);
 						DataOutputStream outToServer = new DataOutputStream(socket.getOutputStream());
@@ -67,10 +70,17 @@ public class SHTTPTestClient {
 //				                    + "If-Modified-Since: " + rfc1123format.format(calendar.getTime()) + "\r\n"
 //				                    + "User-Agent: SHTTPTestClient" + "\r\n\r\n";	
 						// iphone
+//						System.out.println(servname);
+						filename = "/classes/cs433/web/www-root/html-small/" + filename;
+						
+//						System.out.println(filename);
+
 						String httpString =
 				                "GET " + filename + " HTTP/1.0\r\n" + "Host: " + servname + "\r\n"
 				                    + "If-Modified-Since: " + rfc1123format.format(calendar.getTime()) + "\r\n"
 				                    + "User-Agent: iPhone" + "\r\n\r\n";	
+//						System.out.println(httpString);
+						
 						// Is this the right place to count the start time?
 						long timeIssued = System.currentTimeMillis();
 						outToServer.writeBytes(httpString);
