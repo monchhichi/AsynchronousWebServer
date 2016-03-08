@@ -1,0 +1,13 @@
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 1 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 2 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 3 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 4 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 5 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 10 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 15 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 20 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 30 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 40 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 50 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 60 -files filelist.txt -T 60
+java Common.SHTTPTestClient -server zoo.cs.yale.edu -servname zoo.cs.yale.edu -port 80 -parallel 70 -files filelist.txt -T 60

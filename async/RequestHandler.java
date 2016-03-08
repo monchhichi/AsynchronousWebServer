@@ -162,7 +162,7 @@ public class RequestHandler implements IReadWriteHandler {
 			httpRequest = parse();
 			// check virtual URL
 			if (httpRequest.getUrl().equals("/load")) {
-				LoadBalancer balancer = new DumbBalancer();
+				DumbBalancer balancer = DumbBalancer.getInstance();
 				if (balancer.checkLoad()) {
 					outBuffer.put(new String("HTTP/1.0 200 OK\r\n").getBytes());
 					outBuffer.put(new String("Content-Length: 0\r\n").getBytes());

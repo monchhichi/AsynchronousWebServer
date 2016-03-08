@@ -80,7 +80,7 @@ public class AIOServer {
 			httpRequest = parse(sb);
 			// check virtual URL
 			if (httpRequest.getUrl().equals("/load")) {
-				LoadBalancer balancer = new DumbBalancer();
+				DumbBalancer balancer = DumbBalancer.getInstance();
 				if (balancer.checkLoad()) {
 					request.put(new String("HTTP/1.0 200 OK\r\n").getBytes());
 					request.put(new String("Content-Length: 0\r\n").getBytes());
