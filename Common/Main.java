@@ -132,5 +132,7 @@ public class Main {
 		server.setPort(Integer.parseInt(config.get("Listen")));
 		server.setRoot(defaultRoot);
 		server.start();
+		System.out.println(config);
+		server.setConfig(config);
 	}
 }

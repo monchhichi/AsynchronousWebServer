@@ -13,7 +13,15 @@ public abstract class Server{
 	protected int cacheSize;
 	private int currentCacheSize;
 	protected ServerSocket listenSocket;
+	protected HashMap<String, String> config = new HashMap<String, String>();
 	
+	public HashMap<String, String> getConfig() {
+		return config;
+	}
+	public void setConfig(HashMap<String, String> config) {
+		this.config = config;
+	}
+
 	protected Map<String, String> cache = new HashMap<String, String>();
 	
 	public int getPort() {
